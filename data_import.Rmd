@@ -33,3 +33,15 @@ tail(litters_df)
 skimr::skim(litters_df)  #not used that much
 ```
 
+
+## Options to read_csv
+
+check out `?read_csv()` for more information
+
+```{r}
+litters_df = read_csv("./data/FAS_litters.csv", skip = 10, col_names = FALSE) #used when the dataset's first row is not column names
+
+litters_df = read_csv("./data/FAS_litters.csv", na = c("", "NA", ".", 999)) #see missing values
+```
+
+
