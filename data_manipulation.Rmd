@@ -54,15 +54,35 @@ select(litters_df, litter_number, everything())
 relocate(litters_df, litter_number)
 ```
 
+## `filter`
 
+```{r}
+filter(litters_df, gd0_weight < 22)
+```
 
+```{r}
+filter(litters_df, gd0_weight >= 22)
+```
 
+```{r}
+filter(litters_df, gd_of_birth == 20)  # == a test for equality
+```
 
+```{r}
+filter(litters_df, !(gd_of_birth == 20))  #give not equal to 20, everything that's not the case
+```
 
+```{r}
+filter(litters_df, gd0_weight >= 22, gd_of_birth == 20)
+```
 
+```{r}
+filter(litters_df, group == "Mod8")
+```
 
-
-
+```{r}
+filter(litters_df, group %in% c("Con7", "Mod8")) #either this two options
+```
 
 
 
